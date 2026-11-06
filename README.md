@@ -70,6 +70,32 @@ docker-compose up --build
 
 ## 🌐 SerpApi Integration & Live Web Search
 
+## 📚 RAG Document Library
+
+Roamly supports shared admin knowledge documents and private traveler documents. Open **My Documents** in the sidebar to upload and manage personal travel files. An administrator can open **Knowledge Base** from the sidebar after an admin role is enabled; the page includes global uploads, processing history, and user upload monitoring.
+
+Supported formats are PDF, TXT, DOCX, JSON, CSV, and Markdown (15 MB maximum). Uploads are text-extracted, split into overlapping paragraph-aware chunks, embedded with the configured Gemini embedding model, and saved in PostgreSQL/pgvector. Original files are stored under `backend/app/private_uploads` using generated filenames. Upload and reprocessing jobs are recorded in `document_processing_jobs`.
+
+### Existing database setup
+
+For databases created before this feature, apply the migration once:
+
+```bash
+docker compose exec -T postgres psql -U roamly -d roamly_db < backend/migrations/20261102_rag_document_ownership.sql
+```
+
+Set `FIREBASE_PROJECT_ID` to the Firebase project configured by the frontend (defaults to the current Roamly project). Backend routes verify Firebase ID tokens and map the verified Firebase UID to a Roamly user. To grant administrator access, set `is_admin = TRUE` for the intended user in the `users` table; the server enforces this on every `/api/admin/*` request.
+
+After the user signs in once (which creates the backend user record), an administrator can be granted with:
+
+```sql
+UPDATE users SET is_admin = TRUE WHERE email = 'admin@example.com';
+```
+
+The document APIs are under `/api/admin/documents/*` for global knowledge and `/api/user/documents/*` for personal files. `/api/chat/ask` returns a grounded answer with source document IDs and snippets. The planner routes factual follow-up questions through this endpoint and displays source links; itinerary-generation prompts continue through the existing planner.
+
+Only documents with completed extraction and embedding are eligible for retrieval. Queries search global documents plus the authenticated user's private documents. Queries without an authenticated owner are restricted to global scope. Applying the migration and configuring Gemini and Firebase are required for an existing local deployment.
+
 Roamly AI features a secure, backend-only **SerpApi integration** that powers real-time tourism discoveries without compromising the curated database or exposing credentials to the client.
 
 ### 1. Environment Variables

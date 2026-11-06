@@ -1,0 +1,22 @@
+{
+  "source_file": "/Users/akashdegavath/Projects/Roamly AI/data/raw/hotels.csv",
+  "output_file": "/Users/akashdegavath/Projects/Roamly AI/data/processed/hotels.json",
+  "input_rows": 59707,
+  "output_rows": 59707,
+  "row_count_preserved": true,
+  "unique_normalized_hotel_city_country_keys": 59694,
+  "duplicate_key_rows": 13,
+  "countries": 107,
+  "cities": 2015,
+  "missing_price_rows": 46665,
+  "missing_rating_rows": 0,
+  "missing_coordinates_rows": 59707,
+  "missing_currency_rows": 59707,
+  "missing_amenities_rows": 3171,
+  "cleaning_notes": [
+    "All input rows are retained, including duplicate normalized hotel/city/country keys.",
+    "Missing numeric values remain null; no prices, currencies, coordinates, descriptions, photos, or live availability were invented.",
+    "The original source values are retained under raw_source_fields.",
+    "destination_slug is a normalized lookup hint and does not imply a matching destination record exists."
+  ]
+}

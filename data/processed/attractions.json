@@ -1,0 +1,80 @@
+[
+  {
+    "destination_slug": "kyoto-japan",
+    "name": "Fushimi Inari Taisha",
+    "category": "Iconic shrine",
+    "description": "Walk through thousands of vermilion torii gates that wind up Mt. Inari, a breathtaking and deeply spiritual experience.",
+    "latitude": 34.9671,
+    "longitude": 135.7727,
+    "avg_rating": 4.8,
+    "review_count": 4200,
+    "duration_hours": 2,
+    "image_url": "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=500&q=80",
+    "tags": ["Cultural landmark", "Great for photos", "Hiking"]
+  },
+  {
+    "destination_slug": "kyoto-japan",
+    "name": "Arashiyama Bamboo Grove",
+    "category": "Scenic area",
+    "description": "Stroll through towering bamboo, explore Tenryu-ji Temple and enjoy riverside views in one of Kyoto's most serene areas.",
+    "latitude": 35.0094,
+    "longitude": 135.6727,
+    "avg_rating": 4.7,
+    "review_count": 3800,
+    "duration_hours": 3,
+    "image_url": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&q=80",
+    "tags": ["Nature & scenery", "Temples", "Seasonal beauty"]
+  },
+  {
+    "destination_slug": "kyoto-japan",
+    "name": "Nishiki Market",
+    "category": "Food market",
+    "description": "A lively, centuries-old market with local delicacies, street food and Kyoto's unique culinary culture.",
+    "latitude": 35.0050,
+    "longitude": 135.7686,
+    "avg_rating": 4.5,
+    "review_count": 2100,
+    "duration_hours": 2,
+    "image_url": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=500&q=80",
+    "tags": ["Local food", "Shopping", "Cultural experience"]
+  },
+  {
+    "destination_slug": "kerala-india",
+    "name": "Fort Kochi & Chinese Fishing Nets",
+    "category": "Cultural landmark",
+    "description": "Colonial Dutch, Portuguese and British streets with historic shore-operated Chinese fishing nets.",
+    "latitude": 9.9656,
+    "longitude": 76.2421,
+    "avg_rating": 4.7,
+    "review_count": 1200,
+    "duration_hours": 2.5,
+    "image_url": "https://images.unsplash.com/photo-1562979314-bee7453e911c?w=500&q=80",
+    "tags": ["Colonial history", "Harbor views", "Sunset walk"]
+  },
+  {
+    "destination_slug": "kerala-india",
+    "name": "Munnar Tea Gardens & Echo Point",
+    "category": "Scenic area",
+    "description": "High altitude tea plantations shrouded in morning mist in the Western Ghats.",
+    "latitude": 10.0889,
+    "longitude": 77.0595,
+    "avg_rating": 4.8,
+    "review_count": 2400,
+    "duration_hours": 4,
+    "image_url": "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=500&q=80",
+    "tags": ["Tea estates", "Mist mountains", "Trekking"]
+  },
+  {
+    "destination_slug": "kerala-india",
+    "name": "Alleppey Backwater Houseboat Cruise",
+    "category": "Water activities",
+    "description": "Glide through the emerald lagoons and palm-fringed canals aboard a handcrafted kettuvallam.",
+    "latitude": 9.4981,
+    "longitude": 76.3388,
+    "avg_rating": 4.9,
+    "review_count": 3500,
+    "duration_hours": 6,
+    "image_url": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=500&q=80",
+    "tags": ["Houseboat", "Lagoon canals", "Sunset cruise"]
+  }
+]
